@@ -1,4 +1,4 @@
-<div class="test">
+<!-- <div class="test">
   <li
     *ngFor="let column of columns"
     [ngClass]="{
@@ -6,14 +6,8 @@
       'non-column-class': column.isSeparatingColumn
     }"
   >
-    <div cdkDropList [cdkDropListData]="column.groups">
-      <div
-        cdkDropListGroup
-        class="example-container"
-        *ngFor="let group of column.groups"
-        cdkDrag
-        [cdkDragData]="group"
-      >
+    <div>
+      <div class="example-container" *ngFor="let group of column.groups">
         <h2>{{ group.title }}</h2>
         <div
           cdkDropList
@@ -34,4 +28,6 @@
       </div>
     </div>
   </li>
-</div>
+</div> -->
+
+
