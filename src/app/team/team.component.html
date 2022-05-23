@@ -4,12 +4,13 @@
     color="primary"
     aria-label="Add a new member"
     class="add-member-button"
+    (click)="openDialog()"
   >
     <mat-icon>add</mat-icon>
   </button>
   <mat-card-title>{{ teamTitle }}</mat-card-title>
   <mat-card-subtitle>{{ eventSheduledTime }}</mat-card-subtitle>
-  <mat-card-content>
+  <mat-card-content class="team-members">
     <app-team-member
       *ngFor="let member of members"
       [member]="member"
