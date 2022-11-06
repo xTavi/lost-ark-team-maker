@@ -1,0 +1,17 @@
+<mat-card
+  [style.background-color]="pendingMember.role == 'Support' ? 'red' : '#ebebeb'"
+  class="team-pendingMember"
+>
+  <mat-card-title
+    >{{ pendingMember.name }}
+    <button
+      mat-icon-button
+      aria-label="Delete this entry"
+      class="delete-button"
+      (click)="deletePendingMember()"
+    >
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-card-title>
+  <mat-card-subtitle>{{ pendingMember.role }} </mat-card-subtitle>
+</mat-card>
