@@ -8,8 +8,34 @@
 
   <div class="chip-class">
     <mat-chip-list aria-label="Role selection">
-      <mat-chip color="primary" onclick="focused=true">DPS</mat-chip>
-      <mat-chip color="primary">Support</mat-chip>
+      <mat-chip
+        [selected]="!isSelected"
+        (click)="handleSelection()"
+        color="primary"
+        >DPS</mat-chip
+      >
+
+      <mat-chip
+        [selected]="isSelected"
+        (click)="handleSelection()"
+        color="primary"
+        >Support</mat-chip
+      >
+    </mat-chip-list>
+  </div>
+
+  <div class="raid-selection-class">
+    <mat-chip-list aria-label="Raid selection">
+      <mat-chip (click)="handleValtanSelection($event)" color="primary"
+        >Valtan</mat-chip
+      >
+
+      <mat-chip
+        [selected]="isSelected"
+        (click)="handleSelection()"
+        color="primary"
+        >Support</mat-chip
+      >
     </mat-chip-list>
   </div>
 </div>

@@ -91,6 +91,16 @@ export class PendingPlayerComponentDialog {
     @Inject(MAT_DIALOG_DATA) public data: TeamMember
   ) {}
 
+  public isSelected = false;
+
+  handleValtanSelection(event: any) {
+    console.log(event.target);
+  }
+
+  handleSelection() {
+    this.isSelected = !this.isSelected;
+  }
+
   onNoClick(): void {
     this.dialogRef.close();
   }
