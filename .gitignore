@@ -10,11 +10,9 @@
 # dependencies
 /node_modules
 
-
 .angular/
 .angular/cache
 .angular/*
-
 
 # profiling files
 chrome-profiler-events*.json
@@ -49,4 +47,9 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+.angular/cache/*
+.angular/cache/13.3.5/angular-webpack/d635698d64595804d24f14f4167d7ebdf67eef65/0.pack
+.angular/cache/13.3.5/angular-webpack/d635698d64595804d24f14f4167d7ebdf67eef65/1.pack
+/.angular/cache/
 
