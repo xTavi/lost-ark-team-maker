@@ -13,9 +13,13 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
+import { MatChipsModule } from '@angular/material/chips';
 import { AppComponent } from './app.component';
 import { PendingListMemberComponent } from './pending-list/pending-list-member/pending-list-member.component';
-import { PendingListComponent } from './pending-list/pending-list.component';
+import {
+  PendingListComponent,
+  PendingPlayerComponentDialog,
+} from './pending-list/pending-list.component';
 import { TeamMemberComponent } from './team/team-member/team-member.component';
 import {
   TeamComponent,
@@ -28,6 +32,7 @@ import {
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+    MatFormFieldModule,
     HttpClientModule,
     ReactiveFormsModule,
     DragDropModule,
@@ -39,6 +44,7 @@ import {
     MatInputModule,
     MatSelectModule,
     MatSnackBarModule,
+    MatChipsModule,
   ],
   declarations: [
     AppComponent,
@@ -47,6 +53,7 @@ import {
     TeamMemberCreateDialogComponent,
     PendingListComponent,
     PendingListMemberComponent,
+    PendingPlayerComponentDialog,
   ],
   bootstrap: [AppComponent],
   providers: [],

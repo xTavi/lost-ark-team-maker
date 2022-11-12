@@ -17,7 +17,7 @@ export class TeamComponent {
   @Input() eventSheduledTime: string = '15:20';
   public members: Array<TeamMember> = [
     { name: 'Tavi', role: 'dps' },
-    { name: 'Sarafan', role: 'dps' },
+    { name: 'fdfas', role: 'dps' },
   ];
 
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar) {}
@@ -28,6 +28,7 @@ export class TeamComponent {
       width: '450px',
       data: newTeamMember,
     });
+    debugger;
 
     dialogRef.afterClosed().subscribe((result: TeamMember) => {
       if (!this.isTeamMemberValid(result)) return;

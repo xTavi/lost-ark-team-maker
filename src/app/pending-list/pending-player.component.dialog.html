@@ -1,0 +1,27 @@
+<h1 mat-dialog-title style="margin-bottom: 30px">Register for this week</h1>
+<div mat-dialog-content>
+  <mat-form-field appearance="fill" class="form">
+    <mat-label>Character name</mat-label>
+    <mat-icon matSuffix>person</mat-icon>
+    <input matInput [(ngModel)]="data.name" placeholder="I join with this" />
+  </mat-form-field>
+
+  <div class="chip-class">
+    <mat-chip-list aria-label="Role selection">
+      <mat-chip color="primary" onclick="focused=true">DPS</mat-chip>
+      <mat-chip color="primary">Support</mat-chip>
+    </mat-chip-list>
+  </div>
+</div>
+
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Close</button>
+  <button
+    mat-raised-button
+    color="primary"
+    [mat-dialog-close]="data"
+    cdkFocusInitial
+  >
+    Register
+  </button>
+</div>

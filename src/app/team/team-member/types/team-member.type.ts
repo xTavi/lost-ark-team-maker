@@ -1,4 +1,9 @@
-export interface TeamMember {
-  name: string;
-  role: string;
+export class TeamMember {
+  constructor() {
+    this.name = '';
+    this.role = '';
+  }
+
+  public name: string;
+  public role: string;
 }
