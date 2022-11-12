@@ -1,0 +1,28 @@
+<h1 mat-dialog-title style="margin-bottom: 30px">Character registration</h1>
+<div mat-dialog-content>
+  <mat-form-field appearance="fill" class="form">
+    <mat-label>Character name</mat-label>
+    <mat-icon matSuffix>person</mat-icon>
+    <input matInput [(ngModel)]="data.name" placeholder="I join with this" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="form">
+    <mat-label>Role</mat-label>
+    <mat-select [(ngModel)]="data.role">
+      <mat-option value="Dps">Dps</mat-option>
+      <mat-option value="Support">Support</mat-option>
+    </mat-select>
+    <mat-hint align="start">Paladin / Bard are supports</mat-hint>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Close</button>
+  <button
+    mat-raised-button
+    color="primary"
+    [mat-dialog-close]="data"
+    cdkFocusInitial
+  >
+    Register
+  </button>
+</div>

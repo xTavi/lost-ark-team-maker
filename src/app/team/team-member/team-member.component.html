@@ -1,0 +1,17 @@
+<mat-card
+  [style.background-color]="member.role == 'Support' ? 'red' : '#ebebeb'"
+  class="team-member"
+>
+  <mat-card-title
+    >{{ member.name }}
+    <button
+      mat-icon-button
+      aria-label="Delete this team-member"
+      class="delete-button"
+      (click)="deleteTeamMember()"
+    >
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-card-title>
+  <mat-card-subtitle>{{ member.role }} </mat-card-subtitle>
+</mat-card>

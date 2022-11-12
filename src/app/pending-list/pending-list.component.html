@@ -1,0 +1,20 @@
+<mat-card class="pending-list">
+  <button
+    mat-fab
+    color="primary"
+    aria-label="Add player to pending list"
+    class="add-member-button"
+    (click)="openAddPlayerDialog()"
+  >
+    <mat-icon>add</mat-icon>
+  </button>
+  <mat-card-title>Pending List</mat-card-title>
+  <mat-card-subtitle>Here you can enroll for any activity</mat-card-subtitle>
+  <mat-card-content class="team-members">
+    <app-pending-list-member
+      *ngFor="let pendingMember of pendingMembers"
+      [pendingMember]="pendingMember"
+      (deletePendingMemberEvent)="handleDeleteEvent($event)"
+    ></app-pending-list-member>
+  </mat-card-content>
+</mat-card>

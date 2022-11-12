@@ -1,0 +1,16 @@
+@import '~@angular/material/prebuilt-themes/purple-green.css';
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+.dashboard {
+  display: flex;
+
+  &_element {
+    width: 45%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+  }
+}
+
+// .divider {
+//   width: 5%;
+// }
